@@ -38,6 +38,7 @@ function demo(e,i){const original=videoLibrary[e[0]];const customId=getCustomVid
 if(original){html+=videoFrame(original,'Pradinė demonstracija')}
 else if(ref){html+=`<p class="small"><a class="demo-link" href="${ref}" target="_blank" rel="noopener">▶ Atidaryti pradinę demonstraciją</a></p><p class="source">${demoStatus[e[0]]||'Pratimo demonstracija'} · MuscleWiki</p>`}
 else{html+=`<p class="small muted">Pradinė demonstracija dar neįkelta. <a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=${encodeURIComponent(query+' shorts demonstration')}">Ieškoti demonstracijos</a></p>`}
+html+=`<p class="small"><a class="demo-link" href="https://www.youtube.com/results?search_query=${encodeURIComponent(query+' exercise tutorial')}" target="_blank" rel="noopener">🔎 Ieškoti šio pratimo video YouTube</a></p>`;
 html+='<p class="small"><b>Mano pasirinktas vaizdo įrašas</b></p>';
 if(customId){html+=videoFrame({id:customId},'Mano pasirinktas vaizdo įrašas')}
 else{html+='<p class="small muted">Dar nepridėjai savo vaizdo įrašo.</p>'}
